@@ -1,0 +1,28 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(brew install *)",
+      "Bash(python3.12 --version)",
+      "Bash(python3.12 -m venv venv)",
+      "Bash(venv/bin/python --version)",
+      "Bash(echo \"venv created with $\\(venv/bin/python --version\\)\")",
+      "Bash(backend/venv/bin/pip install *)",
+      "Bash(backend/venv/bin/python -m uvicorn backend.main:socket_app --reload --port 8000)",
+      "Bash(echo \"Backend PID: $!\")",
+      "Read(//tmp/**)",
+      "Bash(pkill -f \"uvicorn backend.main\")",
+      "Bash(echo \"PID: $!\")",
+      "Bash(npm install *)",
+      "Read(//opt/homebrew/bin/**)",
+      "Read(//Users/saish/.nvm/versions/**)",
+      "Bash(export PATH=\"/opt/homebrew/bin:$PATH\")",
+      "Bash(npm run *)",
+      "Bash(echo \"Frontend PID: $!\")",
+      "Bash(curl -s http://localhost:8000/)",
+      "Bash(curl -s -X POST http://localhost:8000/rooms -H 'Content-Type: application/json' -d '{\"host_name\": \"TestUser\"}')",
+      "Bash(pkill -f \"vite\")",
+      "Bash(git init *)",
+      "Bash(git add *)"
+    ]
+  }
+}
